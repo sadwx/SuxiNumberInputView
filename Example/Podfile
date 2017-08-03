@@ -1,5 +1,4 @@
 use_frameworks!
-platform :ios, '10.0'
 
 target 'SuxiNumberInputView_Example' do
   pod 'SuxiNumberInputView', :path => '../'
