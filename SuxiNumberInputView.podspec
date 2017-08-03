@@ -22,7 +22,7 @@ SuxiNumberInputView is a simple custom input view for UITextField and UITextView
                        DESC
 
   s.homepage         = 'https://github.com/sadwx/SuxiNumberInputView'
-  s.screenshots      = 'https://github.com/sadwx/SuxiNumberInputView/blob/master/ScreenShot.png'
+#s.screenshots      = ['https://github.com/sadwx/SuxiNumberInputView/blob/master/ScreenShot.png']
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'simon.lin' => 'sadwx4017@gmail.com' }
   s.source           = { :git => 'https://github.com/sadwx/SuxiNumberInputView.git', :tag => s.version.to_s }
@@ -33,9 +33,9 @@ SuxiNumberInputView is a simple custom input view for UITextField and UITextView
   s.source_files = 'SuxiNumberInputView/Classes/**/*'
   s.resources = "SuxiNumberInputView/**/*.xib"
   
-  s.resource_bundles = {
-    'SuxiNumberInputView' => ['Pod/**/*.xib']
-  }
+#s.resource_bundles = {
+#    'SuxiNumberInputView' => ['Pod/**/*.xib']
+#  }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
