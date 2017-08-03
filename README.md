@@ -9,6 +9,49 @@
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
+## Usage
+Use SuxiNumberInputView like below:
+
+```swift
+let textFieldInputView = SuxiNumberInputView().bindTo(textField: textField)
+textFieldInputView?.delegate = self
+
+let textViewInputView = SuxiNumberInputView().bindTo(textView: textView)
+textViewInputView?.delegate = self
+```
+
+And your UITextField and UITextView should work as usual.
+
+Notice that SuxiNumberInputView will automatically change keyboard type to number pad when binding.
+
+SuxiNumberInputView does very simple check to avoid incorrect number format. Currently only support floating number format.
+
+SuxiNumberInputView also provide SuxiNumberInputViewDelegate to let you know what button is tapped.
+
+```swift
+func suxiNumberInputView(_ inputView: SuxiNumberInputView, pressedKey keyCode: SuxiNumberKeyCode)
+```
+
+The SuxiNumberKeyCode enum
+```swift
+enum SuxiNumberKeyCode {
+    case one
+    case two
+    case three
+    case four
+    case five
+    case six
+    case seven
+    case eight
+    case nine
+    case zero
+    case dot
+    case delete
+    case done
+}
+```
+You can use ```keyCode.value``` to obtain the raw value of the keycode, delete and done keycode return empty string. 
+
 ## Screen Shot
 ![Screen Shot](/ScreenShot.png?raw=true)
 
@@ -27,7 +70,7 @@ pod "SuxiNumberInputView"
 
 ## Author
 
-simon.lin, sadwx4017@gmail.com
+simon.lin
 
 ## License
 
