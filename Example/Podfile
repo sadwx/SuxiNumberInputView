@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'SuxiNumberInputView_Example' do
+  pod 'SuxiNumberInputView', :path => '../'
+
+  target 'SuxiNumberInputView_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
