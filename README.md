@@ -14,19 +14,20 @@ Use SuxiNumberInputView like below:
 
 ```swift
 let textFieldInputView = SuxiNumberInputView().bindTo(textField: textField)
+// This is optional
 textFieldInputView?.delegate = self
 
 let textViewInputView = SuxiNumberInputView().bindTo(textView: textView)
+// This is optional
 textViewInputView?.delegate = self
 ```
-
-And your UITextField and UITextView should work as usual.
+And your UITextField or UITextView should work as usual.
 
 Notice that SuxiNumberInputView will automatically change keyboard type to number pad when binding.
 
 SuxiNumberInputView does very simple check to avoid incorrect number format. Currently only support floating number format.
 
-SuxiNumberInputView also provide SuxiNumberInputViewDelegate to let you know what button is tapped.
+SuxiNumberInputViewDelegate provides information to you to know what button is tapped:
 
 ```swift
 func suxiNumberInputView(_ inputView: SuxiNumberInputView, pressedKey keyCode: SuxiNumberKeyCode)

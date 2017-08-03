@@ -33,6 +33,7 @@ public class SuxiNumberInputView: UIView {
     public weak var delegate: SuxiNumberInputViewDelegate?
 
     // MARK: public functions
+    @discardableResult
     public func bindTo(textField: UITextField) -> SuxiNumberInputView? {
         let bundle = Bundle(for: self.classForCoder)
         let inputView = bundle.loadNibNamed("SuxiNumberInputView", owner: nil, options: nil)?.first as? SuxiNumberInputView
@@ -42,6 +43,7 @@ public class SuxiNumberInputView: UIView {
         return inputView
     }
 
+    @discardableResult
     public func bindTo(textView: UITextView) -> SuxiNumberInputView? {
         let bundle = Bundle(for: self.classForCoder)
         let inputView = bundle.loadNibNamed("SuxiNumberInputView", owner: nil, options: nil)?.first as? SuxiNumberInputView
