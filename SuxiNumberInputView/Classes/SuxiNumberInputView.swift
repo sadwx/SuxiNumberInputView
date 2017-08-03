@@ -27,20 +27,29 @@ public class SuxiNumberInputView: UIView {
     // MARK: private fields
     private let buttonKeyCodes: [SuxiNumberKeyCode] = [.zero, .one, .two, .three, .four, .five, .six, .seven, .eight, .nine, .dot, .delete, .done]
     private var textField: UITextField?
+    private var textView: UITextView?
 
     // MARK: public fields
     public weak var delegate: SuxiNumberInputViewDelegate?
 
-    @discardableResult
-    public static func load(with textField: UITextField) -> SuxiNumberInputView? {
-        let inputView = Bundle.main.loadNibNamed(String(describing: self.self), owner: self, options: nil)?.first as? SuxiNumberInputView
+    // MARK: public functions
+    public func bindTo(textField: UITextField) -> SuxiNumberInputView? {
+        let bundle = Bundle(for: self.classForCoder)
+        let inputView = bundle.loadNibNamed("SuxiNumberInputView", owner: nil, options: nil)?.first as? SuxiNumberInputView
         inputView?.textField = textField
         textField.keyboardType = .numberPad
         textField.inputView = inputView
         return inputView
     }
 
-    // MARK: public functions
+    public func bindTo(textView: UITextView) -> SuxiNumberInputView? {
+        let bundle = Bundle(for: self.classForCoder)
+        let inputView = bundle.loadNibNamed("SuxiNumberInputView", owner: nil, options: nil)?.first as? SuxiNumberInputView
+        inputView?.textView = textView
+        textView.keyboardType = .numberPad
+        textView.inputView = inputView
+        return inputView
+    }
 
     // MARK: IBActions
     @IBAction func keyPressed(_ sender: Any) {
@@ -50,29 +59,32 @@ public class SuxiNumberInputView: UIView {
             delegate?.suxiNumberInputView(self, pressedKey: keyCode)
         }
 
-        guard let textField = textField else {
-            return
-        }
-
         switch keyCode {
         case .dot:
-            if textField.text!.contains(keyCode.value) {
+            if let textField = textField, let text = textField.text, text.contains(keyCode.value) || text.isEmpty {
+                return
+            }
+
+            if let textView = textView, textView.text.contains(keyCode.value) || textView.text.isEmpty {
                 return
             }
 
         case .delete:
-            textField.deleteBackward()
+            textField?.deleteBackward()
+            textView?.deleteBackward()
             return
 
         case .done:
-            textField.endEditing(true)
+            textField?.endEditing(true)
+            textView?.endEditing(true)
             return
 
         default:
             break
         }
 
-        textField.insertText(keyCode.value)
+        textField?.insertText(keyCode.value)
+        textView?.insertText(keyCode.value)
     }
 }
 

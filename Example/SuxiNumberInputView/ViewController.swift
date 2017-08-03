@@ -12,13 +12,17 @@ import SuxiNumberInputView
 
 class ViewController: UIViewController, SuxiNumberInputViewDelegate {
     @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var textView: UITextView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
 
-        let inputView = SuxiNumberInputView.load(with: textField)
-        inputView?.delegate = self
+        let textFieldInputView = SuxiNumberInputView().bindTo(textField: textField)
+        textFieldInputView?.delegate = self
+
+        let textViewInputView = SuxiNumberInputView().bindTo(textView: textView)
+        textViewInputView?.delegate = self
     }
 
     override func didReceiveMemoryWarning() {

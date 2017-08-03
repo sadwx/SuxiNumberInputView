@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'SuxiNumberInputView'
   s.version          = '0.1.0'
-  s.summary          = 'A simple custom number pad input view for UITextField.'
+  s.summary          = 'A simple custom number pad input view with a "Done" button.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,11 +18,11 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-SuxiNumberInputView is a simple custom input view for UITextField when you want to use number pad keyboard and a  "Done" button.
+SuxiNumberInputView is a simple custom input view for UITextField and UITextView when you want to use number pad keyboard with a "Done" button.
                        DESC
 
   s.homepage         = 'https://github.com/sadwx/SuxiNumberInputView'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
+  s.screenshots      = 'https://github.com/sadwx/SuxiNumberInputView/ScreenShot.png'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'simon.lin' => 'sadwx4017@gmail.com' }
   s.source           = { :git => 'https://github.com/sadwx/SuxiNumberInputView.git', :tag => s.version.to_s }
@@ -31,10 +31,11 @@ SuxiNumberInputView is a simple custom input view for UITextField when you want 
   s.ios.deployment_target = '10.0'
 
   s.source_files = 'SuxiNumberInputView/Classes/**/*'
+  s.resources = "SuxiNumberInputView/**/*.xib"
   
-  # s.resource_bundles = {
-  #   'SuxiNumberInputView' => ['SuxiNumberInputView/Assets/*.png']
-  # }
+  s.resource_bundles = {
+    'SuxiNumberInputView' => ['Pod/**/*.xib']
+  }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
