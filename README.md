@@ -22,7 +22,7 @@ pod "SuxiNumberInputView"
 
 ## Author
 
-sadwx, simon.lin@nogle.com
+simon.lin, sadwx4017@gmail.com
 
 ## License
 

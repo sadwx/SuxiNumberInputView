@@ -1,0 +1,16 @@
+PODS:
+  - SuxiNumberInputView (0.1.0)
+
+DEPENDENCIES:
+  - SuxiNumberInputView (from `../`)
+
+EXTERNAL SOURCES:
+  SuxiNumberInputView:
+    :path: ../
+
+SPEC CHECKSUMS:
+  SuxiNumberInputView: a07a279ee9f2dff1144c1bb1468310c4fdd4ceca
+
+PODFILE CHECKSUM: 323be6e345363c9b33f0c5ea6f68a8a1e596c2ee
+
+COCOAPODS: 1.3.0.beta.2
