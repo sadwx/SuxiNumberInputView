@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SuxiNumberInputView'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'A simple custom number pad input view with a "Done" button.'
   s.requires_arc     = true
 
