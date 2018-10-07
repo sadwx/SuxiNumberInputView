@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		45DF801E216A2DEE00706884 /* SuxiNumberInputView in Resources */ = {isa = PBXBuildFile; fileRef = 45DF801D216A2DEE00706884 /* SuxiNumberInputView */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -28,7 +29,8 @@
 
 /* Begin PBXFileReference section */
 		05DD52C4A1BE35670594AF94 /* Pods_SuxiNumberInputView_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SuxiNumberInputView_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		362EFE4C336EB7C178192767 /* SuxiNumberInputView.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SuxiNumberInputView.podspec; path = ../SuxiNumberInputView.podspec; sourceTree = "<group>"; };
+		362EFE4C336EB7C178192767 /* SuxiNumberInputView.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SuxiNumberInputView.podspec; path = ../SuxiNumberInputView.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		45DF801D216A2DEE00706884 /* SuxiNumberInputView */ = {isa = PBXFileReference; lastKnownFileType = folder; name = SuxiNumberInputView; path = ../SuxiNumberInputView; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* SuxiNumberInputView_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuxiNumberInputView_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
+				45DF801D216A2DEE00706884 /* SuxiNumberInputView */,
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACD21AFB9204008FA782 /* Example for SuxiNumberInputView */,
 				607FACE81AFB9204008FA782 /* Tests */,
@@ -246,6 +249,7 @@
 			files = (
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
+				45DF801E216A2DEE00706884 /* SuxiNumberInputView in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,7 +269,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-SuxiNumberInputView_Example/Pods-SuxiNumberInputView_Example-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-SuxiNumberInputView_Example/Pods-SuxiNumberInputView_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/SuxiNumberInputView/SuxiNumberInputView.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -274,7 +278,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SuxiNumberInputView_Example/Pods-SuxiNumberInputView_Example-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SuxiNumberInputView_Example/Pods-SuxiNumberInputView_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		4FB68A863664FA64BD9220E2 /* [CP] Check Pods Manifest.lock */ = {
