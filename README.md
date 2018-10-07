@@ -54,7 +54,7 @@ enum SuxiNumberKeyCode {
 You can use ```keyCode.value``` to obtain the raw value of the keycode, delete and done keycode return empty string. 
 
 ## Screen Shot
-![Screen Shot](/ScreenShot.png?raw=true)
+![Screen Shot](https://github.com/sadwx/SuxiNumberInputView/blob/master/ScreenShot.png?raw=true)
 
 ## Requirements
 
