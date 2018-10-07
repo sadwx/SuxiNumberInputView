@@ -28,9 +28,11 @@ SuxiNumberInputView is a simple custom input view for UITextField and UITextView
   s.source           = { :git => 'https://github.com/sadwx/SuxiNumberInputView.git', :tag => s.version.to_s }
 
   s.ios.deployment_target = '10.0'
+  s.platform     = :ios, '10.0'
+  s.swift_version = '4.2'
 
-  s.source_files = 'SuxiNumberInputView/Classes/**/*'
-  s.resources = "SuxiNumberInputView/**/*.xib"
+  s.source_files = 'SuxiNumberInputView/**/*.{swift}'
+  s.resources = 'SuxiNumberInputView/**/*.{xib,png}'
   
   s.frameworks = 'UIKit'
 end
