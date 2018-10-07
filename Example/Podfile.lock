@@ -1,16 +1,16 @@
 PODS:
-  - SuxiNumberInputView (0.1.0)
+  - SuxiNumberInputView (0.1.1)
 
 DEPENDENCIES:
   - SuxiNumberInputView (from `../`)
 
 EXTERNAL SOURCES:
   SuxiNumberInputView:
-    :path: ../
+    :path: "../"
 
 SPEC CHECKSUMS:
-  SuxiNumberInputView: 5a15e61430e5b004864e7f59d54175cd0c16c6a9
+  SuxiNumberInputView: 5f29c74fcda128f4539159e0733b6f79818f5be0
 
 PODFILE CHECKSUM: 323be6e345363c9b33f0c5ea6f68a8a1e596c2ee
 
-COCOAPODS: 1.3.0
+COCOAPODS: 1.5.3
